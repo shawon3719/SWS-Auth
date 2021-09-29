@@ -35,11 +35,11 @@
 composer require sws/smartauth --v.1.1
 
 ```
-2. add ```sws-auth``` provider to your ```config/app.php``` ```\SWS\Auth\Providers\AuthServiceProvider::class,```
+2. add ```auth``` provider to your ```config/app.php``` ```\SWS\Auth\Providers\AuthServiceProvider::class,```
 3. Setup your email configuration to your `.env` file
 4. From the projects root folder run:
 ```
-php artisan vendor:publish --tag=sws-auth
+php artisan vendor:publish --tag=auth
 
 ```
 
@@ -82,10 +82,10 @@ php artisan vendor:publish --tag=sws-auth
 
 ### File Tree
 ```
-sws-auth
+auth
 ├── src
 │   ├── config
-│   │   └── sws-auth.php
+│   │   └── auth.php
 │   ├── database
 │   │   └── migrations
 │   │       └── create_users_table.php
@@ -101,9 +101,9 @@ sws-auth
 │   │   └── AuthServiceProvider.php
 │   ├── Public
 │   │   ├── css
-│   │   │   └── sws-auth-style.css
+│   │   │   └── auth-style.css
 │   │   └── js
-│   │       └── sws-auth-script.js
+│   │       └── auth-script.js
 │   ├── Resources
 │   │   ├── views
 │   │   │   └── Auth
@@ -131,7 +131,7 @@ sws-auth
 ```
 
 ### SWS Auth License
-sws-auth is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
+auth is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
 
 ### Contributors
 * Thanks goes to these [wonderful people](https://github.com/shawon3719/pacakge-custom-auth/graphs/contributors):

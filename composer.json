@@ -1,5 +1,5 @@
 {
-    "name": "sws/sws-auth",
+    "name": "sws/auth",
     "description": "Custom authentication package including registration, login, email verification and more.",
     "type": "library",
     "license": "MIT",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-          "sws\\sws-auth\\": "src/"
+          "sws\\auth\\": "src/"
         }
     }
 }

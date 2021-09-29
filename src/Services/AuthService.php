@@ -29,7 +29,7 @@ class AuthService
         $token = Crypt::encrypt($request->email);
   
         Mail::send('email.userVerificationEmail', ['user' => $user, 'token' => $token], function($mail) use($user){
-              $mail->from(config('sws-auth.send_email_from'));
+              $mail->from(config('auth.send_email_from'));
               $mail->to($user->email);
               $mail->subject('User Verification E-mail');
           });
@@ -68,7 +68,7 @@ class AuthService
                 if($user->first()->email_verified_at != ''){
 
                     Mail::send('email.passwordResetEmail', ['token' => $token], function($mail) use($request){
-                        $mail->from(config('sws-auth.send_email_from'));
+                        $mail->from(config('auth.send_email_from'));
                         $mail->to($request->email);
                         $mail->subject('Password Reset E-mail');
                     });
