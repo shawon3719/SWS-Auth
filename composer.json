@@ -1,0 +1,21 @@
+{
+    "name": "sws/sws-auth",
+    "description": "Custom authentication package including registration, login, email verification and more.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masudul Hasan Shawon",
+            "email": "shawon3719@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "sws\\sws-auth\\": "src/"
+        }
+    }
+}
