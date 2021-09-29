@@ -39,7 +39,7 @@ composer require sws/auth
 3. Setup your email configuration to your `.env` file
 4. From the projects root folder run:
 ```
-php artisan vendor:publish --tag=auth
+php artisan vendor:publish --tag=smart-auth
 
 ```
 
