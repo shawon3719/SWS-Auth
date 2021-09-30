@@ -1,5 +1,5 @@
 {
-    "name": "SWS/Auth",
+    "name": "sws/auth",
     "description": "Custom authentication package including registration, login, email verification and more.",
     "type": "library",
     "license": "MIT",
