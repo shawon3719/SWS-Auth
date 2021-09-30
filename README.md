@@ -37,6 +37,16 @@ composer require sws/auth
 ```
 2. add ```auth``` provider to your ```config/app.php``` ```\SWS\Auth\Providers\AuthServiceProvider::class,```
 3. Setup your email configuration to your `.env` file
+```
+MAIL_MAILER=smtp
+MAIL_HOST=YOUR_MAIL_HOST
+MAIL_PORT=2525
+MAIL_USERNAME=YOUR_USERNAME
+MAIL_PASSWORD=YOUR_PASSWORD
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=noreply@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
 4. From the projects root folder run:
 ```
 php artisan vendor:publish --tag smart-auth
@@ -45,6 +55,7 @@ php artisan vendor:publish --tag smart-auth
 
 #### Optionally Build Cache
 1. From the projects root folder run `php artisan config:cache`
+2. You can change "email from address" from `app/config/smart-auth.php `
 
 
 ### Routes
