@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-          "sws\\auth\\": "src/"
+          "SWS\\Auth\\": "src/"
         }
     }
 }
