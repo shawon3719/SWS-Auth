@@ -32,14 +32,14 @@
 ### Installation Instructions
 1. run :
 ```
-composer require sws/smartauth --v.1.1
+composer require sws/auth
 
 ```
 2. add ```auth``` provider to your ```config/app.php``` ```\SWS\Auth\Providers\AuthServiceProvider::class,```
 3. Setup your email configuration to your `.env` file
 4. From the projects root folder run:
 ```
-php artisan vendor:publish --tag=auth
+php artisan vendor:publish --tag=smart-auth
 
 ```
 
