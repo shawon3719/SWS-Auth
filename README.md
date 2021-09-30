@@ -50,33 +50,33 @@ php artisan vendor:publish --tag smart-auth
 ### Routes
 
 ```bash
-+--------+----------+------------------------+----------------------------+------------------------------------------------------------------+---------------------------------------------+
-| Domain | Method   | URI                    | Name                       | Action                                                           | Middleware                                  |
-+--------+----------+------------------------+----------------------------+------------------------------------------------------------------+---------------------------------------------+
-|        | GET|HEAD | /                      | home                       | Closure                                                          | web                                         |
-|        | GET|HEAD | api/user               |                            | Closure                                                          | api                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\Authenticate:sanctum    |
-|        | POST     | forgot-password        | auth.forgot.password       | sws\smartauth\Http\Controllers\AuthController@postForgotPassword | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | GET|HEAD | forgot-password        | auth.forgot.password.index | sws\smartauth\Http\Controllers\AuthController@forgotPassword     | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | GET|HEAD | login                  | auth.login.index           | sws\smartauth\Http\Controllers\AuthController@loginIndex         | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | POST     | login                  | auth.login.check           | sws\smartauth\Http\Controllers\AuthController@postLogin          | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | GET|HEAD | logout                 | auth.logout                | sws\smartauth\Http\Controllers\AuthController@logout             | web                                         |
-|        | GET|HEAD | register               | auth.register.index        | sws\smartauth\Http\Controllers\AuthController@index              | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | POST     | register               | auth.register.store        | sws\smartauth\Http\Controllers\AuthController@register           | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | GET|HEAD | reset-password/{token} | auth.reset.password.index  | sws\smartauth\Http\Controllers\AuthController@resetPassword      | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | POST     | reset-password/{token} | auth.reset.password        | sws\smartauth\Http\Controllers\AuthController@postResetPassword  | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-|        | GET|HEAD | sanctum/csrf-cookie    |                            | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show       | web                                         |
-|        | GET|HEAD | user-verify/{token}    | auth.email.verify          | sws\smartauth\Http\Controllers\AuthController@verifyEmail        | web                                         |
-|        |          |                        |                            |                                                                  | App\Http\Middleware\RedirectIfAuthenticated |
-+--------+----------+------------------------+----------------------------+------------------------------------------------------------------+---------------------------------------------+
++--------+----------+------------------------+----------------------------+-------------------------------------------------------------+---------------------------------------------+
+| Domain | Method   | URI                    | Name                       | Action                                                      | Middleware                                  |
++--------+----------+------------------------+----------------------------+-------------------------------------------------------------+---------------------------------------------+
+|        | GET|HEAD | /                      |                            | Closure                                                     | web                                         |
+|        | GET|HEAD | api/user               |                            | Closure                                                     | api                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\Authenticate:sanctum    |
+|        | POST     | forgot-password        | auth.forgot.password       | SWS\Auth\Http\Controllers\AuthController@postForgotPassword | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | GET|HEAD | forgot-password        | auth.forgot.password.index | SWS\Auth\Http\Controllers\AuthController@forgotPassword     | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | GET|HEAD | login                  | login                      | SWS\Auth\Http\Controllers\AuthController@loginIndex         | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | POST     | login                  | auth.login.check           | SWS\Auth\Http\Controllers\AuthController@postLogin          | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | GET|HEAD | logout                 | auth.logout                | SWS\Auth\Http\Controllers\AuthController@logout             | web                                         |
+|        | GET|HEAD | register               | register                   | SWS\Auth\Http\Controllers\AuthController@index              | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | POST     | register               | auth.register.store        | SWS\Auth\Http\Controllers\AuthController@register           | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | GET|HEAD | reset-password/{token} | auth.reset.password.index  | SWS\Auth\Http\Controllers\AuthController@resetPassword      | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | POST     | reset-password/{token} | auth.reset.password        | SWS\Auth\Http\Controllers\AuthController@postResetPassword  | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
+|        | GET|HEAD | sanctum/csrf-cookie    |                            | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show  | web                                         |
+|        | GET|HEAD | user-verify/{token}    | auth.email.verify          | SWS\Auth\Http\Controllers\AuthController@verifyEmail        | web                                         |
+|        |          |                        |                            |                                                             | App\Http\Middleware\RedirectIfAuthenticated |
++--------+----------+------------------------+----------------------------+-------------------------------------------------------------+---------------------------------------------+
 
 ```
 
