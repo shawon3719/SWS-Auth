@@ -2,6 +2,9 @@
 
 Route::group(['middleware' => ['web'], 'namespace'=>'SWS\Auth\Http\Controllers'], function(){
 
+    Route::get('permissions', 'AuthController@Permission')->name('permission');
+
+    
     Route::get('register', 'AuthController@index')->name('register');
     Route::post('register', 'AuthController@register')->name('auth.register.store');
 
@@ -17,3 +20,13 @@ Route::group(['middleware' => ['web'], 'namespace'=>'SWS\Auth\Http\Controllers']
     Route::get('user-verify/{token}', 'AuthController@verifyEmail')->name('auth.email.verify');
 
 });
+
+Route::group(['middleware' => 'role:user'], function() {
+
+    Route::get('/user', function() {
+ 
+       return 'Welcome...!!';
+       
+    });
+ 
+ });

@@ -49,7 +49,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 ```
 4. From the projects root folder run:
 ```
-php artisan vendor:publish --tag smart-auth
+php artisan vendor:publish --tag sws-auth
 
 ```
 
